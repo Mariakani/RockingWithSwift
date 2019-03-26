@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         if let selectedImagNum = selectedImageNumber, let totalNum = totalPictureNumber{
             title = "Picture \(selectedImagNum + 1) of \(totalNum)"
+            
+           
         }
       
         navigationItem.largeTitleDisplayMode = .never
@@ -36,4 +38,6 @@ class DetailViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
     }
+    
+ 
 }

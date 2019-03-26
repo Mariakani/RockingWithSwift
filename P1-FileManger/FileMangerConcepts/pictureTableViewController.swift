@@ -14,7 +14,7 @@ class pictureTableViewController: UITableViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         title = "Storm Viewer"
-        
+         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share the App", style: .done, target: self, action: #selector(shareOnTapped))
         navigationController?.navigationBar.prefersLargeTitles = true
         pictures = loadPictures()
         pictures.sort()
@@ -50,6 +50,11 @@ class pictureTableViewController: UITableViewController{
             vc.totalPictureNumber = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    @objc func shareOnTapped()
+    {
+        print("Share this app with your friends")
     }
 }
 
